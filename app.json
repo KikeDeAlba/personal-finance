@@ -4,9 +4,9 @@
     "slug": "personal-finance",
     "version": "1.0.0",
     "orientation": "portrait",
-    "schema": "personal-finance",
+    "scheme": "personal-finance",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
