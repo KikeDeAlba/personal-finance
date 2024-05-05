@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "scheme": "personal-finance",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
