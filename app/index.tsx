@@ -1,11 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import { Text, View } from 'react-native'
 
-export default function App() {
+export default function App () {
   return (
-    <View >
-      <Text>wtf</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Text>loading</Text>
+      <StatusBar style='auto' />
     </View>
-  );
+  )
 }
