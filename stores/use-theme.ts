@@ -4,15 +4,15 @@ import { createJSONStorage, persist } from 'zustand/middleware'
 
 interface ThemeProps {
   profile: {
-    background: `#${string}`
+    backgroundColor: `#${string}`
     text: `#${string}`
   }
 }
 
-export const useTheme = create(persist<ThemeProps>(() => ({
+export const useTheme = create(persist<ThemeProps>((set, get) => ({
   profile: {
-    background: '#ffffff',
-    text: '#000000'
+    backgroundColor: '#000',
+    text: '#fff'
   }
 }), {
   name: 'theme-storage',
