@@ -1,22 +1,22 @@
-import { useState } from 'react'
-import { Text, TextInput, TouchableHighlight, View } from 'react-native'
+import { StyledText, StyledTextInput, StyledTouchableHighlight, StyledView } from 'components/styled'
+// import { useState } from 'react'
 
 export default function ConfigAccount () {
-  const [section, setSection] = useState(0)
+  // const [section, setSection] = useState(0)
 
   return (
     <>
-      <View>
-        <Text>Cual es tu nombre?</Text>
+      <StyledView className='items-center flex-1 pt-32'>
+        <StyledText className='font-bold'>Cual es tu nombre?</StyledText>
 
-        <TextInput />
+        <StyledTextInput />
 
-        <TouchableHighlight>
-          <Text>
+        <StyledTouchableHighlight>
+          <StyledText>
             Siguiente
-          </Text>
-        </TouchableHighlight>
-      </View>
+          </StyledText>
+        </StyledTouchableHighlight>
+      </StyledView>
     </>
   )
 }

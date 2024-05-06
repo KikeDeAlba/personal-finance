@@ -1,19 +1,24 @@
 import { Slot } from 'expo-router'
-import { View } from 'react-native'
 import constants from 'expo-constants'
 import { useStartupConfig } from 'hooks/startup-config'
+import { StatusBar } from 'expo-status-bar'
+import { StyledView } from 'components/styled'
+import { useTheme } from 'stores/use-theme'
 
 export default function HomeLayout () {
   useStartupConfig()
+  const backgroundColor = useTheme(state => state.profile.backgroundColor)
 
   return (
-    <View
+    <StyledView
+      className='flex-1'
       style={{
-        flex: 1,
-        paddingTop: constants.statusBarHeight
+        paddingTop: constants.statusBarHeight,
+        backgroundColor
       }}
     >
+      <StatusBar style='dark' />
       <Slot />
-    </View>
+    </StyledView>
   )
 }
