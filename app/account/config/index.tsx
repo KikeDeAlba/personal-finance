@@ -7,7 +7,7 @@ export default function ConfigAccount () {
   return (
     <>
       <StyledView className='items-center flex-1 pt-32'>
-        <StyledText className='font-bold'>Cual es tu nombre?</StyledText>
+        <StyledText className='font-bold text-white text-xl'>Cual es tu nombre?</StyledText>
 
         <StyledTextInput />
 
