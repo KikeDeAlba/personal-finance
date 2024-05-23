@@ -1,9 +1,9 @@
-import { Text, View } from 'react-native'
+import { Text, View } from "react-native";
 
-export default function App () {
-  return (
-    <View>
-      <Text>loading</Text>
-    </View>
-  )
+export default function App() {
+	return (
+		<View>
+			<Text>loading</Text>
+		</View>
+	);
 }
