@@ -8,4 +8,7 @@ export const ROUTES = {
             path: '/account/config'
         },
     },
+    auth: {
+        path: '/auth'
+    }
 }
