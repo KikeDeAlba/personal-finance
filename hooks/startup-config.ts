@@ -4,14 +4,14 @@ import { useAccount } from 'stores/user'
 
 export const useStartupConfig = () => {
   const account = useAccount(state => ({
-    isLogged: state.isLogged,
+    isRegistered: state.isRegistered,
     fingerprint: state.account.fingerprint,
     pin: state.account.pin
   }))
 
   useEffect(() => {
-    if (!account.isLogged) {
+    if (!account.isRegistered) {
       router.push('/account/config')
     }
-  }, [])
+  }, [account])
 }
