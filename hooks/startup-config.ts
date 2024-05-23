@@ -1,7 +1,8 @@
 import { router } from 'expo-router'
+import { authentitcate } from 'expo-utils/auth'
 import { useEffect } from 'react'
 import { useAccount } from 'stores/user'
-import * as LocalAuthentication from 'expo-local-authentication';
+import { ROUTES } from 'utils/routes'
 
 export const useStartupConfig = () => {
   const account = useAccount(state => ({
@@ -10,22 +11,13 @@ export const useStartupConfig = () => {
     pin: state.account.pin
   }))
 
-  console.log('account', account)
-
   useEffect(() => {
     if (!account.isRegistered) {
-      router.push('/account/config')
+      router.push(ROUTES.account.config.path)
     }
 
-    if (account.fingerprint) {
-      LocalAuthentication.authenticateAsync({
-        promptMessage: 'Please authenticate to continue',
-        fallbackLabel: 'Authenticate'
-      }).then(({ success }) => {
-        if (success) {
-          router.push('/home')
-        }
-      })
-    }
+    if (account.fingerprint) authentitcate().then((success) => {
+      if (success) router.push(ROUTES.home.path)
+    })
   }, [account])
 }
